@@ -14,6 +14,17 @@ spl_autoload_register(function ($class) {
     <title>OOP</title>
 </head>
 <body>
-    
+    <!--i’m testing the three type classes here so i can see the override working-->
+    <?php
+        $grassStarter = new GrassStarter('Bulbasaur', 'Kanto', 'Grass');
+        var_dump($grassStarter);
+
+        $fireStarter = new FireStarter('Charmander', 'Kanto', 'Fire');
+        var_dump($fireStarter);
+
+        $waterStarter = new WaterStarter('Squirtle', 'Kanto', 'Water');
+        var_dump($waterStarter);
+    ?>
+
 </body>
 </html>
