@@ -7,3 +7,5 @@ class Charmander extends FireStarter
         parent::__construct('Charmander', 'Kanto', 'Fire');
     }
 }
+
+// mainly mentioned in Bulbasaur.php ... i did the same for charmander.

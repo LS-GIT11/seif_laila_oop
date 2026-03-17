@@ -1,9 +1,11 @@
 <?php
 
+// this is the parent class for all the starter pokemon. it adds the name, region and type properties to the pokemon and also adds the attack function that will be used by all the starter pokemon. it also uses the evolve trait to add the evolve function to all the starter pokemon.
+
 class StarterPokemon implements StarterInterface
 {
     use Evolve;
-
+    
     protected $name;
     protected $region;
     protected $type;
