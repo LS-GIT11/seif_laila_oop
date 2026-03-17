@@ -14,17 +14,43 @@ spl_autoload_register(function ($class) {
     <title>OOP</title>
 </head>
 <body>
-    <!--i’m testing the three type classes here so i can see the override working-->
+
     <?php
-        $grassStarter = new GrassStarter('Bulbasaur', 'Kanto', 'Grass');
-        var_dump($grassStarter);
+// i like adding functions to make the sentences look better and to show the attack and evolve functions!! :) seprating with the "." makes it easier for me to read personally.
 
-        $fireStarter = new FireStarter('Charmander', 'Kanto', 'Fire');
-        var_dump($fireStarter);
+        function showPokemon(StarterInterface $pokemon){
+            echo "<p>" . $pokemon->getName() . " - " . $pokemon->getType() . " type! " . " " . $pokemon->attack() . "</p>";
+        }
+// i’m testing the four type classes now here replacing the previous three so i can see the override working
 
-        $waterStarter = new WaterStarter('Squirtle', 'Kanto', 'Water');
-        var_dump($waterStarter);
+        $waterStarter = new Squirtle();
+        $fireStarter = new Charmander();
+        $grassStarter = new Chikorita();
+        $bulbasaur = new Bulbasaur();
+
+        showPokemon($waterStarter);
+        showPokemon($fireStarter);
+        showPokemon($grassStarter);
+        showPokemon($bulbasaur);
+
+        // var_dump($waterStarter);
+        // var_dump($fireStarter);
+        // var_dump($grassStarter);
+        // var_dump($bulbasaur);
+
+// comment this out so it looks cleaner and we can see the evolve function working without the var_dumps getting in the way
+        
+        function evolvePokemon(StarterPokemon $pokemon){
+            echo "<p>" . $pokemon->getName() . " " . $pokemon->evolve() . "</p>";
+        }
+ 
+        evolvePokemon($waterStarter);
+        evolvePokemon($fireStarter);
+        evolvePokemon($grassStarter);
+        evolvePokemon($bulbasaur);
     ?>
+
+    
 
 </body>
 </html>
