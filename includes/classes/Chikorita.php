@@ -7,3 +7,5 @@ class Chikorita extends GrassStarter
         parent::__construct('Chikorita', 'Johto', 'Grass');
     }
 }
+
+// mainly mentioned in Bulbasaur.php ... i did the same for chikorita.
